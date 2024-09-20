@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js with Prisma Setup
+
+This repository provides a standard setup for building Next.js applications integrated with Prisma as the ORM. Follow the instructions below to clone and use this project for your development.
+
+## Features
+
+- **Standardized Project Structure:** Organized folder layout for clarity.
+- **Prisma Integration:** Pre-configured Prisma schema and client setup.
+- **Database Seeding:** Seed script to populate your database with initial data.
+- **TypeScript Support:** Fully configured TypeScript for type safety.
+- **Easy Setup:** Step-by-step instructions for getting started.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- [Node.js](https://nodejs.org/en/download/) (>= 14.x)
+- npm or Yarn
+- A PostgreSQL database (or other supported databases)
+
+
+## Installation
+
+Clone the repository:
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+```
+
+Install dependencies:
+```sh
+npm install
+# or
+yarn install
+```
+Set up environment variables: Create a `.env` file in the root of the project and configure your database connection:
+
+```plaintext
+DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/DATABASE_NAME"
+```
+
+Run Prisma migrations: Initialize your database and apply migrations:
+
+
+```sh
+npx prisma migrate dev --name init
+```
+
+Seed the database (optional): If you want to populate your database with initial data:
+```sh
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+**Run the application:** Start the development server:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Open your browser:** 
+   Visit [http://localhost:3000](http://localhost:3000) to see your application running.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+You can start building your Next.js application by adding components, pages, and API routes as needed. Use the Prisma client to interact with your database in your application logic.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you would like to contribute to this project, feel free to submit a pull request or open an issue.
+## License
+This project is licensed under the MIT
