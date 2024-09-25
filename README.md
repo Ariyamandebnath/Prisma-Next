@@ -70,4 +70,4 @@ You can start building your Next.js application by adding components, pages, and
 
 If you would like to contribute to this project, feel free to submit a pull request or open an issue.
 ## License
-This project is licensed under the MIT
+This project is licensed under The MIT license 
